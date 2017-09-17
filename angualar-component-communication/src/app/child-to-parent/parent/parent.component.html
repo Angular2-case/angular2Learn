@@ -1,0 +1,33 @@
+
+<div style="padding: 15px;">
+  <div class="panel panel-success">
+    <div class="panel-heading">组件通信之子组件 to 父组件 </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">@OUtput()使用</div>
+            <div class="panel-body">
+              <p>output方式 childText:{{childName}}</p>
+              <br>
+              <app-output-child (childNameEventEmitter)="showChildName($event)"></app-output-child>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">注入的方式使用</div>
+            <div class="panel-body">
+              <br>
+              <p>注入的方式 childTextForInject:{{childNameForInject}} </p>
+              <app-output-child></app-output-child>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

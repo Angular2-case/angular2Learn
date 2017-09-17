@@ -1,0 +1,42 @@
+
+<div style="padding: 15px;">
+  <div class="panel panel-success">
+    <div class="panel-heading">组件通信</div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">@Input()使用</div>
+            <div class="panel-body">
+              childText:<app-child  [textContent] = "varString"></app-child>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">@viewChild使用</div>
+            <div class="panel-body">
+              <input class="form-control" type="text" #inputName >
+              <button class=" btn btn-primary" (click)="clickEvent(inputName)">viewChild</button>
+              <app-view-child-child></app-view-child-child>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">局部变量使用</div>
+            <div class="panel-body">
+              <input class="form-control" type="text" #viewChildInputName >
+              <button class=" btn btn-primary" (click)="viewChild.myName(viewChildInputName.value)">局部变量传值</button>
+              <app-view-child-child #viewChild></app-view-child-child>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
